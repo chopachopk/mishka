@@ -1,0 +1,48 @@
+.opensans() {
+  font-family: "OpenSans", "Arial", sans-serif;
+}
+
+.reset-list() {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.title() {
+  .opensans;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: @black;
+}
+
+.button() {
+  display: inline-block;
+  min-width: 260px;
+  padding: 15px 0;
+
+  .opensans;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  color: @grey-text;
+  text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: middle;
+
+  background-color: @white;
+  border: 2px solid @grey-text;
+  cursor: pointer;
+
+  &:hover {
+    color: @white;
+    background-color: @grey-text;
+  }
+
+  &:focus {
+    color: fade(@white, 30%);
+    background-color: @grey-text;
+  }
+}
