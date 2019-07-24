@@ -1,8 +1,18 @@
+.actual {
+  box-sizing: border-box;
+  width: @mobile-width;
+  padding: 0 30px;
+}
+
 .actual__title {
+  margin: 32px 0 5px;
+
   .title;
 }
 
 .actual__mark {
+  margin: 0;
+
   .opensans;
   font-size: 17px;
   font-weight: bold;
@@ -35,4 +45,72 @@
 
 .actual__order-button {
   .button;
+}
+
+@media (min-width: @tablet-width) {
+  .actual {
+    position: relative;
+
+    width: 668px;
+    padding: 0;
+  }
+
+  .actual__title {
+    margin: 50px 0;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .actual__mark {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+
+    width: 82px;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .actual__description {
+    width: 290px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .actual__image {
+    position: absolute;
+    top: 105px;
+    right: 0;
+  }
+
+  .actual__price {
+    width: 290px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .actual {
+    width: 1050px;
+    padding-left: 175px;
+  }
+
+  .actual__title {
+    margin-top: 132px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .actual__mark {
+    position: absolute;
+    top: 12px;
+    left: 44px;
+  }
+
+  .actual__image {
+    top: -40px;
+  }
 }
