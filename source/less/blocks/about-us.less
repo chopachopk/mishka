@@ -1,3 +1,9 @@
+.about-us {
+  box-sizing: border-box;
+  width: @mobile-width;
+  padding: 0 30px;
+}
+
 .about-us__title {
   .title;
 }
@@ -39,5 +45,56 @@
 
   &--box {
     background-image: url("../../img/icon-feature-gift.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    width: 668px;
+    padding: 0;
+  }
+
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-us__item {
+    flex-basis: 50%;
+
+    font-size: 20px;
+    line-height: 22px;
+
+    &--scandinavian {
+      order: 1;
+    }
+
+    &--like {
+      order: 3;
+    }
+
+    &--native {
+      order: 2;
+    }
+
+    &--box {
+      order: 4;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    width: 700px;
+  }
+
+  .about-us__title {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
