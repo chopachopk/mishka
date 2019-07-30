@@ -8,45 +8,45 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
-        </a>
-        <button class="page-header__toggle" type="button">Открыть меню</button>
-        <nav class="page-header__main-nav main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="main-nav__additional-info">
-              <ul class="main-nav__additional-list">
-                <li class="main-nav__additional-item">
-                  <a class="main-nav__link main-nav__additional-link" href="#">Новые поступления</a>
-                </li>
-                <li class="main-nav__additional-item">
-                  <a class="main-nav__link main-nav__additional-link" href="#">Распродажа</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <nav class="page-header__service-nav service-nav">
-          <ul class="service-nav__list">
-            <li class="service-nav__item">
-              <a class="service-nav__link service-nav__link--search" href="#">Поиск по сайту</a>
-            </li>
-            <li class="service-nav__item">
-              <a class="service-nav__link service-nav__link--cart" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </nav>
-        <p class="page-header__delivery">
-          Бесплатная доставка по России
-        </p>
-      </div>
+      <nav class="page-header__main-nav main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--logo">
+            <a class="main-nav__link main-nav__link--logo" href="#">
+              <img class="main-nav__logo" src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--catalog">
+            <a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item main-nav__item--form">
+            <a class="main-nav__link main-nav__link--form" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__service-nav service-nav">
+            <ul class="service-nav__list">
+              <li class="service-nav__item">
+                <a class="service-nav__link service-nav__link--search" href="#">Поиск по сайту</a>
+              </li>
+              <li class="service-nav__item">
+                <a class="service-nav__link service-nav__link--cart" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__additional-info">
+            <ul class="main-nav__additional-list">
+              <li class="main-nav__additional-item">
+                <a class="main-nav__link main-nav__additional-link" href="#">Новые поступления</a>
+              </li>
+              <li class="main-nav__additional-item">
+                <a class="main-nav__link main-nav__additional-link" href="#">Распродажа</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__item main-nav__item--delivery">
+            Бесплатная доставка по России
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="page-main">
