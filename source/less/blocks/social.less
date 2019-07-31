@@ -1,5 +1,11 @@
 .social__list {
+  display: flex;
+  justify-content: space-between;
+
   .reset-list;
+  width: 146px;
+  margin: 0 auto;
+  padding-bottom: 25px;
 }
 
 .social__link {
@@ -21,5 +27,11 @@
 
   &--tw {
     background-image: url("./../img/icon-twitter.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    padding: 0;
   }
 }

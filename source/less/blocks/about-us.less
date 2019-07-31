@@ -1,3 +1,9 @@
+.about-us {
+  box-sizing: border-box;
+  width: @mobile-width;
+  padding: 0 30px;
+}
+
 .about-us__title {
   .title;
 }
@@ -18,26 +24,77 @@
   background-repeat: no-repeat;
 
   &--eco {
-    background-image: url("../../img/icon-feature-flower.svg");
+    background-image: url("./../img/icon-feature-flower.svg");
   }
 
   &--scandinavian {
-    background-image: url("../../img/icon-feature-money.svg");
+    background-image: url("./../img/icon-feature-money.svg");
   }
 
   &--like {
-    background-image: url("../../img/icon-feature-heart.svg");
+    background-image: url("./../img/icon-feature-heart.svg");
   }
 
   &--handmade {
-    background-image: url("../../img/icon-feature-ball.svg");
+    background-image: url("./../img/icon-feature-ball.svg");
   }
 
   &--native {
-    background-image: url("../../img/icon-feature-rocket.svg");
+    background-image: url("./../img/icon-feature-rocket.svg");
   }
 
   &--box {
-    background-image: url("../../img/icon-feature-gift.svg");
+    background-image: url("./../img/icon-feature-gift.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    width: 668px;
+    padding: 0;
+  }
+
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-us__item {
+    flex-basis: 50%;
+
+    font-size: 20px;
+    line-height: 22px;
+
+    &--scandinavian {
+      order: 1;
+    }
+
+    &--like {
+      order: 3;
+    }
+
+    &--native {
+      order: 2;
+    }
+
+    &--box {
+      order: 4;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    width: 700px;
+  }
+
+  .about-us__title {
+    font-size: 53px;
+    line-height: 57px;
   }
 }

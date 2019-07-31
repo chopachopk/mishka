@@ -2,43 +2,63 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Мишка — милые штуки для дома</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
-      </a>
       <nav class="page-header__main-nav main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Вязание на заказ</a>
-            </li>
-            <li class="main-nav__item main-nav__item--search">
-              <a class="main-nav__link" href="#">Поиск по сайту</a>
-            </li>
-            <li class="main-nav__item main-nav__item--cart">
-              <a class="main-nav__link" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--logo">
+            <a class="main-nav__link main-nav__link--logo">
+              <img class="main-nav__logo" src="img/logo-mobile.svg" width="86" height="35" alt="MISHKA">
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--catalog">
+            <a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item main-nav__item--form">
+            <a class="main-nav__link main-nav__link--form" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__service-nav service-nav">
+            <ul class="service-nav__list">
+              <li class="service-nav__item">
+                <a class="service-nav__link service-nav__link--search" href="#">Поиск по сайту</a>
+              </li>
+              <li class="service-nav__item">
+                <a class="service-nav__link service-nav__link--cart" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__additional-info">
+            <ul class="main-nav__additional-list">
+              <li class="main-nav__additional-item">
+                <a class="main-nav__link main-nav__additional-link" href="#">Новые поступления</a>
+              </li>
+              <li class="main-nav__additional-item">
+                <a class="main-nav__link main-nav__additional-link" href="#">Распродажа</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__item main-nav__item--delivery">
+            Бесплатная доставка по России
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__title page-main__title--main-page">Милые штуки ручной работы для дома</h1>
+      <div class="page-main__title-wrapper">
+        <h1 class="page-main__title page-main__title--main-page">Милые штуки ручной<br> работы для дома</h1>
+      </div>
       <ul class="page-main__categories categories">
         <li class="categories__item categories__item--interior">
-          <a class="categories__link" href="#">Предметы интерьера</a>
+          <a class="categories__link" href="#">Предметы<br> интерьера</a>
         </li>
         <li class="categories__item categories__item--toys">
-          <a class="categories__link" href="#">Детские игрушки</a>
+          <a class="categories__link" href="#">Детские<br> игрушки</a>
         </li>
       </ul>
       <section class="page-main__actual actual">
@@ -61,38 +81,43 @@
         </table>
         <img class="actual__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         <p class="actual__price">Цена: 990 руб.</p>
-        <a class="actual__order-button" href="#">ЗАКАЗАТЬ</a>
+        <a class="actual__order-button button" href="#">ЗАКАЗАТЬ</a>
       </section>
       <section class="page-main__about-us about-us">
         <h2 class="about-us__title">Коротко о нас:</h2>
         <ul class="about-us__list">
-          <li class="about-us__item about-us__item--eco">Экологически чистые материалы</li>
-          <li class="about-us__item about-us__item--scandinavian">Скандинавский стиль по российской цене</li>
-          <li class="about-us__item about-us__item--like">Увеличивает лайки на фотографиях</li>
-          <li class="about-us__item about-us__item--handmade">Связано вручную с любовью и умилением</li>
-          <li class="about-us__item about-us__item--native">Поддержка отечественного производителя</li>
-          <li class="about-us__item about-us__item--box">Поставляется в подарочной упаковке</li>
+          <li class="about-us__item about-us__item--eco">Экологически<br> чистые материалы</li>
+          <li class="about-us__item about-us__item--scandinavian">Скандинавский стиль<br> по российской цене</li>
+          <li class="about-us__item about-us__item--like">Увеличивает лайки<br> на фотографиях</li>
+          <li class="about-us__item about-us__item--handmade">Связано вручную с<br> любовью и умилением</li>
+          <li class="about-us__item about-us__item--native">Поддержка отечественного<br> производителя</li>
+          <li class="about-us__item about-us__item--box">Поставляется в<br> подарочной упаковке</li>
         </ul>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--ig" href=""><span class="visually-hidden">Мы в Инстаграме</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--fb" href=""><span class="visually-hidden">Мы в Фейсбуке</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--tw" href=""><span class="visually-hidden">Мы в Твиттере</span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo">
+          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="103" height="34" alt="MISHKA">
+        </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--ig" href=""><span class="visually-hidden">Мы в Инстаграме</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--fb" href=""><span class="visually-hidden">Мы в Фейсбуке</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--tw" href=""><span class="visually-hidden">Мы в Твиттере</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+        </div>
       </div>
     </footer>
   </body>
