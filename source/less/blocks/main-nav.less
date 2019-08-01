@@ -10,13 +10,17 @@
   width: 22px;
   height: 22px;
 
-  font-size: 0;
-
   background-color: transparent;
   border: 0;
 
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
   &::before,
   &::after {
     content: "";
@@ -38,6 +42,20 @@
   &::after {
     transform: rotate(-45deg);
   }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: 2px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: @black;
+  box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
 }
 
 .main-nav__list {
@@ -77,6 +95,17 @@
 .main-nav__additional-info,
 .main-nav__item--delivery {
   display: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__item:not(.main-nav__item--logo),
+  .main-nav--closed .main-nav__service-nav {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
