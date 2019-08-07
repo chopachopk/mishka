@@ -8,8 +8,10 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="page-header__main-nav main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
             <a class="main-nav__link main-nav__link--logo">
@@ -25,10 +27,20 @@
           <li class="main-nav__service-nav service-nav">
             <ul class="service-nav__list">
               <li class="service-nav__item">
-                <a class="service-nav__link service-nav__link--search" href="#">Поиск по сайту</a>
+                <a class="service-nav__link service-nav__link--search" href="#">
+                  <svg class="service-nav__icon service-nav__icon--search" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="-0.8 -0.8 17.6 17.6">
+                    <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+                  </svg>
+                  Поиск по сайту
+                </a>
               </li>
               <li class="service-nav__item">
-                <a class="service-nav__link service-nav__link--cart" href="#">Корзина: пока пуста</a>
+                <a class="service-nav__link service-nav__link--cart" href="#">
+                  <svg class="service-nav__icon service-nav__icon--cart" width="21" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="264.205 370.961 20.294 18.849">
+                    <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+                  </svg>
+                  Корзина: пока пуста
+                </a>
               </li>
             </ul>
           </li>
@@ -52,15 +64,15 @@
     <main class="page-main">
       <div class="page-main__title-wrapper">
         <h1 class="page-main__title page-main__title--main-page">Милые штуки ручной<br> работы для дома</h1>
+        <ul class="page-main__categories categories">
+          <li class="categories__item categories__item--interior">
+            <a class="categories__link" href="#">Предметы<br> интерьера</a>
+          </li>
+          <li class="categories__item categories__item--toys">
+            <a class="categories__link" href="#">Детские<br> игрушки</a>
+          </li>
+        </ul>
       </div>
-      <ul class="page-main__categories categories">
-        <li class="categories__item categories__item--interior">
-          <a class="categories__link" href="#">Предметы<br> интерьера</a>
-        </li>
-        <li class="categories__item categories__item--toys">
-          <a class="categories__link" href="#">Детские<br> игрушки</a>
-        </li>
-      </ul>
       <section class="page-main__actual actual">
         <h2 class="actual__title">Вязаные корзинки</h2>
         <p class="actual__mark">ТОВАР НЕДЕЛИ</p>
@@ -104,7 +116,9 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--ig" href=""><span class="visually-hidden">Мы в Инстаграме</span></a>
+              <a class="social__link social__link--ig" href="">
+                <span class="visually-hidden">Мы в Инстаграме</span>
+              </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--fb" href=""><span class="visually-hidden">Мы в Фейсбуке</span></a>
@@ -115,10 +129,32 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            Разработано
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </div>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+      navMain.classList.remove('main-nav--opened');
+      navMain.classList.add('main-nav--closed');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+
   </body>
 </html>

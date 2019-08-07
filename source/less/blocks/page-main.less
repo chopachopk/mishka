@@ -1,26 +1,27 @@
 .page-main__title-wrapper {
   min-width: @mobile-width;
-  padding: 76px 0 120px;
+  padding-top: 70px;
 
   background-color: #f9f9f9;
   background-image: url("./../img/hero-mobile@1x.jpg");
-  background-position: center -10px;
+  background-position: center -17px;
   background-repeat: no-repeat;
 }
 
 .page-main__title {
   width: 260px;
-  margin: 0 auto;
+  margin: 0 auto 123px;
 
   .title;
   font-size: 27px;
+  line-height: 30px;
   text-align: center;
 
   &--inner-page {
     width: auto;
     min-width: @mobile-width;
     margin-bottom: 30px;
-    padding: 75px 0;
+    padding: 74px 0;
 
     background-color: #f1f1f1;
   }
@@ -36,43 +37,80 @@
 
 @media (min-width: @tablet-width) {
   .page-main__title-wrapper {
+    position: relative;
+
     margin-top: -62px;
-    padding: 160px 0 485px;
+    padding-top: 155px;
 
     background-image: url("./../img/hero-tablet@1x.jpg");
     background-position: center top;
   }
 
+  .page-main__title-wrapper::after,
+  .page-main__title--inner-page::after {
+    content: "";
+
+    position: absolute;
+    bottom: -10px;
+
+    width: 100%;
+    height: 23px;
+
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
+
   .page-main__title {
     width: 668px;
+    margin-bottom: 490px;
 
     font-size: 43px;
     line-height: 50px;
 
     &--inner-page {
+      position: relative;
+
       width: auto;
-      margin: -62px 0 80px;
-      padding: 103px 0 75px;
+      margin: -62px 0 78px;
+      padding: 95px 0 82px;
+
+      &::after {
+        left: 0;
+      }
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__title-wrapper {
-    padding-bottom: 470px;
-
     background-image: url("./../img/hero-desktop@1x.jpg");
+
+    &::after {
+      bottom: -15px;
+
+      height: 37px;
+    }
   }
 
   .page-main__title {
     width: 700px;
+    margin-bottom: 480px;
 
     font-size: 53px;
     line-height: 57px;
 
     &--inner-page {
       width: auto;
-      padding: 103px 0 97px;
+      padding: 95px 0 105px;
+      margin-bottom: 126px;
+
+      &::after {
+        bottom: -15px;
+
+        height: 34px;
+      }
     }
   }
 }

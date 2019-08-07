@@ -1,11 +1,29 @@
 .actual {
+  position: relative;
+
   box-sizing: border-box;
   width: @mobile-width;
-  padding: 0 30px;
+  padding: 0 30px 40px 30px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
 }
 
 .actual__title {
-  margin: 32px 0 5px;
+  margin: 28px 0 5px;
 
   .title;
 }
@@ -21,6 +39,7 @@
 }
 
 .actual__description {
+  margin: 21px 0 17px;
   .opensans;
   font-size: 15px;
   line-height: 24px;
@@ -28,13 +47,28 @@
 }
 
 .actual__info {
+  width: 260px;
+  margin-bottom: 28px;
+
+  border-collapse: collapse;
+
   .opensans;
   font-size: 15px;
   line-height: 20px;
   color: @grey-text;
+
+  td {
+    padding: 10px 0;
+    border-bottom: 1px solid @grey-borders;
+  }
+}
+
+.actual__option {
+  width: 98px;
 }
 
 .actual__price {
+  margin: 20px 0 25px;
   .opensans;
   font-size: 17px;
   font-weight: bold;
@@ -49,10 +83,18 @@
 
     width: 668px;
     padding: 0;
+    padding-bottom: 68px;
+
+    &::after {
+      left: -50px;
+
+      width: @tablet-width;
+      height: 18px;
+    }
   }
 
   .actual__title {
-    margin: 50px 0;
+    margin: 48px 0;
 
     font-size: 43px;
     line-height: 50px;
@@ -60,8 +102,8 @@
 
   .actual__mark {
     position: absolute;
-    top: 12px;
-    right: 20px;
+    top: 10px;
+    right: 21px;
 
     width: 82px;
 
@@ -71,19 +113,35 @@
 
   .actual__description {
     width: 290px;
+    margin-bottom: 33px;
+
     font-size: 17px;
     line-height: 30px;
+  }
+
+  .actual__info {
+    width: 290px;
+    margin-bottom: 55px;
   }
 
   .actual__image {
     position: absolute;
     top: 105px;
     right: 0;
+
+    width: 333px;
+    height: 404px;
   }
 
   .actual__price {
     width: 290px;
+    margin-bottom: 35px;
+
     font-size: 20px;
+  }
+
+  .actual__order-button {
+    width: 290px;
   }
 }
 
@@ -91,10 +149,18 @@
   .actual {
     width: 1050px;
     padding-left: 175px;
+    padding-bottom: 92px;
+
+    &::after {
+      left: 0;
+
+      width: 1050px;
+      height: 23px;
+    }
   }
 
   .actual__title {
-    margin-top: 132px;
+    margin-top: 120px;
 
     font-size: 53px;
     line-height: 57px;
@@ -102,11 +168,23 @@
 
   .actual__mark {
     position: absolute;
-    top: 12px;
-    left: 44px;
+    top: 15px;
+    left: 42px;
+  }
+
+  .actual__description {
+    margin-bottom: 48px;
+  }
+
+  .actual__info {
+    margin-bottom: 108px;
   }
 
   .actual__image {
-    top: -40px;
+    top: -50px;
+    z-index: -1;
+
+    width: 525px;
+    height: 636px;
   }
 }

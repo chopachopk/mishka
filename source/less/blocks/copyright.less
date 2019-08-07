@@ -6,31 +6,53 @@
   border-top: 1px solid #e5e5e5;
 }
 
-.copyright__text {
+.copyright__link {
+  position: relative;
+
+  display: inline-block;
+
+  padding: 5px 57px 10px 0;
+
   .opensans;
   font-size: 19px;
   font-weight: bold;
   line-height: 19px;
   color: @black;
-}
+  text-decoration: none;
 
-.copyright__link {
-  display: inline-block;
-  vertical-align: middle;
+  &::after {
+    content: "";
 
-  width: 27px;
-  height: 34px;
-  margin-left: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
 
-  background-image: url("./../img/htmlacademy.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    width: 27px;
+    height: 34px;
+
+    background-image: url("./../img/htmlacademy.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
     padding: 0;
     border: 0;
+  }
+
+  .copyright__link {
+    padding: 10px 57px 10px 0;
+
+    &::after {
+      top: 5px;
+    }
   }
 }

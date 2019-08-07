@@ -1,5 +1,6 @@
 .main-nav {
   position: relative;
+  z-index: 2;
 }
 
 .main-nav__toggle {
@@ -10,13 +11,17 @@
   width: 22px;
   height: 22px;
 
-  font-size: 0;
-
   background-color: transparent;
   border: 0;
 
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
   &::before,
   &::after {
     content: "";
@@ -40,6 +45,20 @@
   }
 }
 
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: 2px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: @black;
+  box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
+}
+
 .main-nav__list {
   .reset-list;
 }
@@ -54,7 +73,7 @@
   box-sizing: border-box;
   width: 260px;
   margin: 0 auto;
-  padding: 27px 0 27px 45px;
+  padding: 27px 0 28px 45px;
 
   .opensans;
   font-size: 17px;
@@ -63,9 +82,19 @@
   color: @black;
   text-decoration: none;
 
-  &&--logo {
+  &--logo {
     width: 113px;
     padding: 22px 0;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+    outline: none;
   }
 }
 
@@ -77,6 +106,17 @@
 .main-nav__additional-info,
 .main-nav__item--delivery {
   display: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__item:not(.main-nav__item--logo),
+  .main-nav--closed .main-nav__service-nav {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -114,7 +154,12 @@
 
     font-size: 15px;
 
-    &&--catalog {
+    &--logo {
+      width: 113px;
+      padding: 22px 0;
+    }
+
+    &--catalog {
       margin-right: 10px;
     }
   }
@@ -147,17 +192,17 @@
   }
 
   .main-nav__item {
-    &&--catalog {
+    &--catalog {
       order: -3;
       border-right: 1px solid @grey-borders;
     }
 
-    &&--form {
+    &--form {
       order: -3;
       margin-left: 35px;
     }
 
-    &&--logo {
+    &--logo {
       width: 150px;
       margin: 0 100px 0 auto;
     }
@@ -169,7 +214,12 @@
 
     font-size: 17px;
 
-    &&--catalog {
+    &--logo {
+      width: 113px;
+      padding: 22px 0;
+    }
+
+    &--catalog {
       margin-right: 0;
     }
   }
