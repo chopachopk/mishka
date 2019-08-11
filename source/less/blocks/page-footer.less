@@ -31,6 +31,18 @@
     display: block;
 
     margin-right: 80px;
+    padding-bottom: 5px;
+
+    &[href]:hover {
+      .page-footer__logo-image {
+        fill: @aqua-marine-two;
+      }
+    }
+
+    &[href]:active,
+    &[href]:focus {
+      opacity: 0.3;
+    }
   }
 }
 
