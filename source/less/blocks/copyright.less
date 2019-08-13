@@ -1,9 +1,13 @@
 .copyright {
   padding-top: 22px;
 
-  text-align: center;
-
   border-top: 1px solid #e5e5e5;
+}
+
+.copyright__image {
+  flex-basis: 27px;
+  margin-left: auto;
+  fill: @seafoam-blue;
 }
 
 .copyright__link {
@@ -21,6 +25,10 @@
   color: @black;
   text-decoration: none;
 
+  span {
+    flex-basis: 155px;
+  }
+
   &:hover .copyright__image {
     fill: @aqua-marine-two;
   }
@@ -34,11 +42,6 @@
       fill: @aqua-marine-two;
     }
   }
-}
-
-.copyright__image {
-  margin-left: auto;
-  fill: @seafoam-blue;
 }
 
 @media (min-width: @tablet-width) {
