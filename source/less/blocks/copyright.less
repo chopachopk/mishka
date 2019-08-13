@@ -1,17 +1,22 @@
 .copyright {
   padding-top: 22px;
 
-  text-align: center;
-
   border-top: 1px solid #e5e5e5;
 }
 
+.copyright__image {
+  flex-basis: 27px;
+  margin-left: auto;
+  fill: @seafoam-blue;
+}
+
 .copyright__link {
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-  display: inline-block;
-
-  padding: 5px 57px 10px 0;
+  width: 182px;
+  margin: 0 auto;
 
   .opensans;
   font-size: 19px;
@@ -20,25 +25,22 @@
   color: @black;
   text-decoration: none;
 
-  &::after {
-    content: "";
+  span {
+    flex-basis: 155px;
+  }
 
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 27px;
-    height: 34px;
-
-    background-image: url("./../img/htmlacademy.svg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  &:hover .copyright__image {
+    fill: @aqua-marine-two;
   }
 
   &:active,
   &:focus {
     opacity: 0.3;
+    outline: none;
+
+    .copyright__image {
+      fill: @aqua-marine-two;
+    }
   }
 }
 
@@ -46,13 +48,5 @@
   .copyright {
     padding: 0;
     border: 0;
-  }
-
-  .copyright__link {
-    padding: 10px 57px 10px 0;
-
-    &::after {
-      top: 5px;
-    }
   }
 }

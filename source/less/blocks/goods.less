@@ -23,6 +23,10 @@
   padding: 27px;
 
   border: solid 1px @grey-borders;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .goods__title {
@@ -33,6 +37,21 @@
   font-weight: bold;
   line-height: 24px;
   color: @black;
+
+  a {
+    color: @black;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active,
+    &:focus {
+      opacity: 0.3;
+      outline: none;
+    }
+  }
 }
 
 .goods__description {
@@ -68,10 +87,27 @@
   width: 20px;
   height: 22px;
 
-  background-image: url("../img/icon-cart.svg");
-  background-position: top 0 right 0;
-  background-repeat: no-repeat;
+  svg {
+    opacity: 0.2;
+    fill: #231f20;
+  }
+
+  &:hover svg {
+    opacity: 1;
+    fill: @seafoam-blue;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+
+    svg {
+      opacity: 0.3;
+      fill: @seafoam-blue;
+    }
+  }
 }
+
 
 @media (min-width: @tablet-width) {
   .goods {

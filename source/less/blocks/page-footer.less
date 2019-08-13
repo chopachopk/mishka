@@ -3,6 +3,7 @@
   padding: 25px 0;
 
   background-color: @very-light-pink;
+  overflow: hidden;
 }
 
 .page-footer__wrapper {
@@ -31,6 +32,23 @@
     display: block;
 
     margin-right: 80px;
+    padding-bottom: 5px;
+
+    &[href]:hover {
+      .page-footer__logo-image {
+        fill: @aqua-marine-two;
+      }
+    }
+
+    &[href]:active,
+    &[href]:focus {
+      opacity: 0.3;
+      outline: none;
+
+      .page-footer__logo-image {
+        fill: @aqua-marine-two;
+      }
+    }
   }
 }
 
