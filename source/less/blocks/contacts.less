@@ -2,6 +2,7 @@
   box-sizing: border-box;
   width: @mobile-width;
   padding: 36px 0 38px;
+  text-align: center;
 }
 
 .contacts__title {
@@ -13,6 +14,7 @@
   font-weight: bold;
   line-height: 30px;
   color: @black;
+  text-align: left;
 }
 
 .contacts__info {
@@ -23,6 +25,7 @@
   font-size: 15px;
   line-height: 30px;
   color: @grey-text;
+  text-align: left;
 
   td {
     vertical-align: top;
@@ -52,10 +55,6 @@
 
 .contacts__map {
   margin: 10px 0 34px;
-}
-
-.contacts__button {
-  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -91,5 +90,9 @@
   .contacts__map {
     width: 100%;
     margin: 25px 0 52px;
+  }
+
+  .contacts__button {
+    min-width: 230px;
   }
 }
