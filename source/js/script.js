@@ -17,14 +17,16 @@ navToggle.addEventListener('click', function() {
 });
 
 // Попап для заказа
-var link = document.querySelector('.button--order');
+var links = document.querySelectorAll('.button--order');
 var popup = document.querySelector('.popup');
 var overlay = document.querySelector('.overlay');
 // Показать попап
-link.addEventListener('click', function (evt)  {
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener('click', function (evt)  {
     evt.preventDefault();
     popup.classList.add('popup-show');
-});
+  });
+};
 // Закрыть попап по клику на overlay
 overlay.addEventListener('click', function (evt) {
   evt.preventDefault();
