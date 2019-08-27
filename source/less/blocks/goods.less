@@ -17,6 +17,19 @@
   display: block;
 }
 
+.goods__image-link {
+  outline: none;
+}
+
+.goods__image-link:hover + .goods__info {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.goods__image-link:active + .goods__info,
+.goods__image-link:focus + .goods__info {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
 .goods__info {
   box-sizing: border-box;
   width: 260px;
