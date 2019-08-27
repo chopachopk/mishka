@@ -1,0 +1,174 @@
+.process {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 260px;
+  margin: 30px auto 57px;
+  padding: 34px 0;
+  box-shadow: inset 0 0 0 1px @grey-borders;
+}
+
+.process__video {
+  position: relative;
+
+  margin-top: 62px;
+}
+
+.process__video-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 101px;
+  height: 77px;
+
+  background-image: url("../img/icon-play.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  &:hover {
+    width: 121px;
+    height: 92px;
+  }
+
+  &:active,
+  &:focus {
+    width: 81px;
+    height: 62px;
+    opacity: 0.3;
+  }
+}
+
+.process__info {
+  padding: 0 34px;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.process__title {
+  position: absolute;
+  top: 25px;
+
+  margin: 0;
+  padding-left: 57px;
+
+  .opensans();
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: left;
+  color: @black;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 0;
+
+    width: 32px;
+    height: 22px;
+
+    background-image: url("../img/icon-video.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.process__description {
+  margin: 24px 0;
+
+  .opensans();
+  font-size: 13px;
+  line-height: 24px;
+  text-align: left;
+  color: @grey-text;
+}
+
+.process__button {
+  display: block;
+  min-width: 190px;
+}
+
+@media (min-width: @tablet-width) {
+  .process {
+    width: 668px;
+    margin-bottom: 60px;
+    padding: 0 0 48px;
+  }
+
+  .process__video {
+    margin: 0;
+  }
+
+  .process__video-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .process__info {
+    padding: 0 40px;
+  }
+
+  .process__title {
+    position: relative;
+
+    padding-left: 66px;
+    margin: 10px 0 55px;
+
+    font-size: 20px;
+
+    &::before {
+      top: 0;
+      left: 2px;
+    }
+  }
+
+  .process__description {
+    margin-bottom: 35px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .process {
+    display: flex;
+
+    width: 1050px;
+    margin-bottom: 103px;
+    padding: 0;
+  }
+
+  .process__video-img {
+    display: block;
+    width: 682px;
+  }
+
+  .process__info {
+    padding: 0 57px 0 78px;
+  }
+
+  .process__title {
+    padding: 60px 0 0;
+
+    &::before {
+      top: 12px;
+    }
+  }
+
+  .process__description {
+    margin: 60px 0 45px;
+  }
+}
