@@ -17,7 +17,7 @@ navToggle.addEventListener('click', function() {
 });
 
 // Попап для заказа
-var links = document.querySelectorAll('.button--order');
+var links = document.querySelectorAll('.order');
 var popup = document.querySelector('.popup');
 var overlay = document.querySelector('.overlay');
 // Показать попап
