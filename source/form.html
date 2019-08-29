@@ -141,7 +141,7 @@
             <fieldset class="booking__set booking__set--phone">
               <legend class="booking__setname">тел</legend>
               <label class="visually-hidden" for="phone">Ваш телефон:</label>
-              <input class="booking__text-field" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+              <input class="booking__text-field" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="[\+]\d{1}\s\d{3}\s\d{3}\s\d{2}\s\d{2}" minlength="16" maxlength="16">
               <svg class="booking__icon" width="25" height="24"><use xlink:href="#icon-phone"></use></svg>
             </fieldset>
             <fieldset class="booking__set booking__set--email">
